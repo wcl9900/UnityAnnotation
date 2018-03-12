@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/button_unity_call_android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Unity Call Android" />
+
+    <Button
+        android:id="@+id/button_android_call_unity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Android Call Unity" />
+</LinearLayout>
