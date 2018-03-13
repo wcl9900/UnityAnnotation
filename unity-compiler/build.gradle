@@ -5,9 +5,9 @@ def version = '1.0'
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
-    compile 'com.google.auto.service:auto-service:1.0-rc2'
-    compile 'com.squareup:javapoet:1.7.0'
-    implementation project(':unityAnnotation')
+    compile 'com.google.auto.service:auto-service:1.0-rc3'
+    compile 'com.squareup:javapoet:1.8.0'
+    implementation project(':unity-annotation')
 }
 
 tasks.withType(JavaCompile) {
@@ -19,8 +19,8 @@ targetCompatibility = "1.7"
 
 publish {
     userOrg = 'wangchunlong'
-    groupId = 'com.wcl.unity.annotaion'
-    artifactId = 'unityCompiler'
+    groupId = 'com.wcl.unity.annotation'
+    artifactId = 'unity-compiler'
     publishVersion = version
     desc = 'UnityAnnotaion注解解析用来生成相对应的类'
     website = ''

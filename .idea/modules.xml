@@ -4,9 +4,12 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/UnityAnnotation.iml" filepath="$PROJECT_DIR$/UnityAnnotation.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/unityAnnotation/unityAnnotation.iml" filepath="$PROJECT_DIR$/unityAnnotation/unityAnnotation.iml" />
-      <module fileurl="file://$PROJECT_DIR$/unityCall/unityCall.iml" filepath="$PROJECT_DIR$/unityCall/unityCall.iml" />
-      <module fileurl="file://$PROJECT_DIR$/unityCompiler/unityCompiler.iml" filepath="$PROJECT_DIR$/unityCompiler/unityCompiler.iml" />
+      <module fileurl="file://$PROJECT_DIR$/unity-annotation/unity-annotation.iml" filepath="$PROJECT_DIR$/unity-annotation/unity-annotation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/unity-call/unity-call.iml" filepath="$PROJECT_DIR$/unity-call/unity-call.iml" />
+      <module fileurl="file://$PROJECT_DIR$/unity-compiler/unity-compiler.iml" filepath="$PROJECT_DIR$/unity-compiler/unity-compiler.iml" />
+      <module fileurl="file://D:\Work\android-studio-workspace\Library\UnityAnnotation\unity-annotation\unityAnnotation.iml" filepath="D:\Work\android-studio-workspace\Library\UnityAnnotation\unity-annotation\unityAnnotation.iml" />
+      <module fileurl="file://D:\Work\android-studio-workspace\Library\UnityAnnotation\unity-call\unityCall.iml" filepath="D:\Work\android-studio-workspace\Library\UnityAnnotation\unity-call\unityCall.iml" />
+      <module fileurl="file://D:\Work\android-studio-workspace\Library\UnityAnnotation\unity-compiler\unityCompiler.iml" filepath="D:\Work\android-studio-workspace\Library\UnityAnnotation\unity-compiler\unityCompiler.iml" />
     </modules>
   </component>
 </project>

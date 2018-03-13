@@ -25,9 +25,10 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
 
-    compile project(':unityAnnotation')
-    compile project(':unityCall')
-    annotationProcessor project(':unityCompiler')
+    compile project(':unity-annotation')
+    compile project(':unity-call')
+    annotationProcessor project(':unity-compiler')
+//    annotationProcessor 'com.wcl.unity.annotation:unity-compiler:1.0'
 
     implementation files('libs/unity-classes.jar')
 }

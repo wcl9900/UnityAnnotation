@@ -1,0 +1,22 @@
+apply plugin: 'java-library'
+apply plugin: 'com.novoda.bintray-release'
+
+def version = '1.0'
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+}
+tasks.withType(JavaCompile) {
+    options.encoding = "UTF-8"
+}
+sourceCompatibility = "1.7"
+targetCompatibility = "1.7"
+
+publish {
+    userOrg = 'wangchunlong'
+    groupId = 'com.wcl.unity.annotation'
+    artifactId = 'unity-annotation'
+    publishVersion = version
+    desc = 'UnityAnnotaion注解库'
+    website = ''
+}

@@ -1,1 +1,1 @@
-include ':unityCall', ':unityCompiler', ':app', ':unityAnnotation'
+include ':unity-call', ':unity-compiler', ':app', ':unity-annotation'

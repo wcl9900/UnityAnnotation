@@ -9,9 +9,9 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
-            <option value="$PROJECT_DIR$/unityAnnotation" />
-            <option value="$PROJECT_DIR$/unityCall" />
-            <option value="$PROJECT_DIR$/unityCompiler" />
+            <option value="$PROJECT_DIR$/unity-annotation" />
+            <option value="$PROJECT_DIR$/unity-call" />
+            <option value="$PROJECT_DIR$/unity-compiler" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
