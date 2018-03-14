@@ -1,13 +1,13 @@
 apply plugin: 'java-library'
-apply plugin: 'com.novoda.bintray-release'
 
-def version = '1.0'
+version = '1.0'
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     compile 'com.google.auto.service:auto-service:1.0-rc3'
     compile 'com.squareup:javapoet:1.8.0'
-    implementation project(':unity-annotation')
+    compile 'com.wcl.unity.interaction:unity-annotation:1.0'
+//    implementation project(':unity-annotation')
 }
 
 tasks.withType(JavaCompile) {
@@ -17,11 +17,22 @@ tasks.withType(JavaCompile) {
 sourceCompatibility = "1.7"
 targetCompatibility = "1.7"
 
-publish {
-    userOrg = 'wangchunlong'
-    groupId = 'com.wcl.unity.annotation'
-    artifactId = 'unity-compiler'
-    publishVersion = version
-    desc = 'UnityAnnotaion注解解析用来生成相对应的类'
-    website = ''
+ext{
+    versionName = "1.0"//版本号
+    siteUrl = 'https://github.com/wcl9900/UnityAnnotation'    // project homepage
+    gitUrl = 'https://github.com/wcl9900/UnityAnnotation.git' // project git
+
+    groupId = "com.wcl.unity.interaction" //组名称
+    artifactId = "unity-compiler"
+
+    repository = "maven"//仓库名称
+    userOrgName = "wangchunlong"//组织名称
+
+    //库描述介绍
+    descRep = "UnityAnnotation接口交互管理器生成器"
+    //库版本信息描述
+    descVersion = ""
+}
+if(publishCompiler.toBoolean()) {
+    apply from: 'https://raw.githubusercontent.com/wcl9900/jcenter/master/publishJCenter.gradle'
 }

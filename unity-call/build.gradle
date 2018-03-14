@@ -4,12 +4,11 @@ android {
     compileSdkVersion 26
 
 
-
     defaultConfig {
         minSdkVersion 15
         targetSdkVersion 26
         versionCode 1
-        versionName "1.0"
+        versionName version
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
@@ -31,4 +30,24 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+}
+
+ext{
+    versionName = "1.0"//版本号
+    siteUrl = 'https://github.com/wcl9900/UnityAnnotation'    // project homepage
+    gitUrl = 'https://github.com/wcl9900/UnityAnnotation.git' // project git
+
+    groupId = "com.wcl.unity.interaction" //组名称
+    artifactId = "unity-call"
+
+    repository = "maven"//仓库名称
+    userOrgName = "wangchunlong"//组织名称
+
+    //库描述介绍
+    descRep = "UnityAnnotation接口交互管理器绑定逻辑处理"
+    //库版本信息描述
+    descVersion = ""
+}
+if(publishCall.toBoolean()) {
+    apply from: 'https://raw.githubusercontent.com/wcl9900/jcenter/master/publishJCenter.gradle'
 }
