@@ -161,7 +161,7 @@ public class UnityCallAndroidAnnotatedClass {
 
             for (Element elementIntercept : elementsAnnotatedWithIntercept){
                 methodBuilder.addStatement(
-                    "          $T.$N($L,$S,$S)",
+                    "          $T.$N($L,$S,$L)",
                         TypeName.get(elementIntercept.getEnclosingElement().asType()),
                         elementIntercept.getSimpleName().toString(), "mHost", method, "str");
             }

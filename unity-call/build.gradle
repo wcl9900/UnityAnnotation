@@ -30,10 +30,11 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+    compile 'com.wcl.unity.interaction:unity-annotation:1.0'
 }
 
 ext{
-    versionName = "1.0"//版本号
+    versionName = "1.1"//版本号
     siteUrl = 'https://github.com/wcl9900/UnityAnnotation'    // project homepage
     gitUrl = 'https://github.com/wcl9900/UnityAnnotation.git' // project git
 
@@ -49,5 +50,6 @@ ext{
     descVersion = ""
 }
 if(publishCall.toBoolean()) {
-    apply from: 'https://raw.githubusercontent.com/wcl9900/jcenter/master/publishJCenter.gradle'
+//    apply from: 'https://raw.githubusercontent.com/wcl9900/jcenter/master/publishJCenter.gradle'
+    apply from: 'https://gitee.com/wcl9900/jcenter/raw/master/publishJCenter.gradle'
 }
