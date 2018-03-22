@@ -69,18 +69,24 @@ public class AndroidCallUnityAnnotatedClass {
 
             MethodSpec.Builder methodBuilder = MethodSpec.methodBuilder(methodAndroid)
                     .addModifiers(Modifier.PUBLIC, Modifier.STATIC);
-            if(parameters.size() != 1){
-                throw new IllegalArgumentException(String.format("%s method parameter must be %s",
+            if(parameters.size() > 1){
+                throw new IllegalArgumentException(String.format("%s method parameter count must less than or equal to %s",
                         methodAndroid, "1"));
             }
 
             // create method start
-            VariableElement variableElement = parameters.get(0);
-            String argsName = variableElement.getSimpleName().toString();
-            methodBuilder.addParameter(TypeName.get(variableElement.asType()), argsName);
+            if(parameters.size() == 1) {
+                VariableElement variableElement = parameters.get(0);
+                String argsName = variableElement.getSimpleName().toString();
+                methodBuilder.addParameter(TypeName.get(variableElement.asType()), argsName);
 
-            methodBuilder.addStatement("String str = $T.$N($L)",
-                    TypeName.get(element.getEnclosingElement().asType()), methodAndroid, argsName);
+                methodBuilder.addStatement("String str = $T.$N($L)",
+                        TypeName.get(element.getEnclosingElement().asType()), methodAndroid, argsName);
+            }
+            else {
+                methodBuilder.addStatement("String str = \"\"",
+                        TypeName.get(element.getEnclosingElement().asType()), methodAndroid);
+            }
 
             for (Element elementIntercept : elementsAnnotatedWithIntercept){
                 methodBuilder.addStatement("$T.$N($S,$S,$L)",

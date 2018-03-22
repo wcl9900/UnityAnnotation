@@ -8,13 +8,15 @@ import javax.tools.Diagnostic;
  */
 
 public class MessageUtils {
+    public static String TAG = "UnityAnnotation";
+
     public static Messager messager;
 
     public static void error(String msg, Object... args) {
-        messager.printMessage(Diagnostic.Kind.ERROR, String.format("WCLAnnotation>> "+msg, args));
+        messager.printMessage(Diagnostic.Kind.ERROR, String.format(TAG + ">> "+msg, args));
     }
 
     public static void note(String msg, Object... args) {
-        messager.printMessage(Diagnostic.Kind.NOTE, String.format("WCLAnnotation>> "+msg, args));
+        messager.printMessage(Diagnostic.Kind.NOTE, String.format(TAG + ">> "+msg, args));
     }
 }

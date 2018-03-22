@@ -23,4 +23,13 @@ public class AndroidCallUnity1 {
         Toast.makeText(App.getInstance(), "callUnity12", Toast.LENGTH_SHORT).show();
         return student.toString();
     }
+    @AndroidCallUnity
+    public static String callUnity13(){
+        Toast.makeText(App.getInstance(), "callUnity12", Toast.LENGTH_SHORT).show();
+        return "";
+    }
+    @AndroidCallUnity
+    public static void callUnity14(){
+        Toast.makeText(App.getInstance(), "callUnity12", Toast.LENGTH_SHORT).show();
+    }
 }
