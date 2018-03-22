@@ -12,7 +12,7 @@ sourceCompatibility = "1.7"
 targetCompatibility = "1.7"
 
 ext{
-    versionName = "1.1"//版本号
+    versionName = "1.2"//版本号
     siteUrl = 'https://github.com/wcl9900/UnityAnnotation'    // project homepage
     gitUrl = 'https://github.com/wcl9900/UnityAnnotation.git' // project git
 

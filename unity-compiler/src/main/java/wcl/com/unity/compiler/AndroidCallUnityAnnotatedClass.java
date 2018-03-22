@@ -84,6 +84,8 @@ public class AndroidCallUnityAnnotatedClass {
                         TypeName.get(element.getEnclosingElement().asType()), methodAndroid, argsName);
             }
             else {
+                methodBuilder.addStatement("$T.$N()",
+                        TypeName.get(element.getEnclosingElement().asType()), methodAndroid);
                 methodBuilder.addStatement("String str = \"\"",
                         TypeName.get(element.getEnclosingElement().asType()), methodAndroid);
             }

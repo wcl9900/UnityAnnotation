@@ -6,7 +6,7 @@ dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     compile 'com.google.auto.service:auto-service:1.0-rc3'
     compile 'com.squareup:javapoet:1.8.0'
-    compile 'com.wcl.unity.interaction:unity-annotation:1.0'
+    compile 'com.wcl.unity.interaction:unity-annotation:1.2'
 //    implementation project(':unity-annotation')
 }
 
@@ -18,7 +18,7 @@ sourceCompatibility = "1.7"
 targetCompatibility = "1.7"
 
 ext{
-    versionName = "1.1"//版本号
+    versionName = "1.2"//版本号
     siteUrl = 'https://github.com/wcl9900/UnityAnnotation'    // project homepage
     gitUrl = 'https://github.com/wcl9900/UnityAnnotation.git' // project git
 
