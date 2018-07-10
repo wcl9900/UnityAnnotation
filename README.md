@@ -5,6 +5,7 @@
 #使用方式
 
 ##库引用
+
     repositories {
         maven { url 'https://dl.bintray.com/wangchunlong/maven' }
     }
