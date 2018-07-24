@@ -153,6 +153,7 @@ public class UnityCallAndroidAnnotatedClass {
 
             MethodSpec.Builder methodBuilder = MethodSpec.methodBuilder(method)
                     .addModifiers(Modifier.PUBLIC)
+                    .addAnnotation(TypeUtils.ANNOTATION_KEEP)
                     .addParameter(TypeUtils.STRING, "str",Modifier.FINAL);
 
             methodBuilder.addCode("(($T)mHost).runOnUiThread(new Runnable() {\n" +

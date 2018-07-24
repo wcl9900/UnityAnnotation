@@ -21,6 +21,7 @@ import javax.lang.model.element.TypeElement;
 import javax.lang.model.util.Elements;
 import javax.lang.model.util.Types;
 
+import wcl.com.unity.compiler.utils.CollectionUtils;
 import wcl.com.unity.compiler.utils.MessageUtils;
 
 /**
@@ -36,12 +37,9 @@ public class AndroidCallUnityProcessor extends AbstractProcessor {
 
     private Map<String, AndroidCallUnityAnnotatedClass> androidCallUnityAnnotatedClassMap;
 
-    boolean created = false;
-
     @Override
     public synchronized void init(ProcessingEnvironment processingEnv) {
         super.init(processingEnv);
-        created = false;
         elementUtils = processingEnv.getElementUtils();
         filer = processingEnv.getFiler();
 
@@ -54,10 +52,11 @@ public class AndroidCallUnityProcessor extends AbstractProcessor {
 
     @Override
     public boolean process(Set<? extends TypeElement> annotations, RoundEnvironment roundEnv) {
-        if(created) return true;
-        createAndroidCallUnity(roundEnv);
-        created = true;
-        return true;
+        if(CollectionUtils.isNotEmpty(annotations)) {
+            createAndroidCallUnity(roundEnv);
+            return true;
+        }
+        return false;
     }
 
     private void createAndroidCallUnity(RoundEnvironment roundEnv) {

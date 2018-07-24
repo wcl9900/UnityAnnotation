@@ -12,4 +12,6 @@ public class TypeUtils {
     public static final ClassName BIND_INJECT = ClassName.get("com.wcl.unity.call", "UnityCallAndroidInject");
 
     public static final ClassName UNITY_PLAYER = ClassName.get("com.unity3d.player", "UnityPlayer");
+
+    public static final ClassName ANNOTATION_KEEP = ClassName.get("android.support.annotation", "Keep");
 }
